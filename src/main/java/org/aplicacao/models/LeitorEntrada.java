@@ -21,7 +21,7 @@ public class LeitorEntrada {
         try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo))) {
             String linha;
 
-            // 1. Lê a primeira linha com os parâmetros do sistema [cite: 40]
+            // 1. Lê a primeira linha com os parâmetros do sistema 
             linha = br.readLine();
             if (linha != null) {
                 String[] parametros = linha.split(",");
@@ -30,8 +30,7 @@ public class LeitorEntrada {
                 dados.tTroca = Integer.parseInt(parametros[2].trim());
             }
 
-            // 2. Lê exatamente a quantidade de processos (nProc) [cite: 46]
-            // Isso evita ler as legendas textuais que o professor coloca no final do arquivo
+            // 2. Lê exatamente a quantidade de processos (nProc) 
             for (int i = 0; i < dados.nProc; i++) {
                 linha = br.readLine();
                 if (linha != null) {
